@@ -1,0 +1,198 @@
+* { 
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+} 
+html { 
+    scroll-behavior: smooth; 
+} body { 
+    font-family: "Poppins", sans-serif;
+     background-color: #171717;
+      color: #ffffff; 
+    }
+h1, h2 { 
+        font-family: "Bangers", cursive;
+         letter-spacing: 2px; 
+        }
+section {
+        padding: 100px 8%;
+} 
+.categoria {
+     color: #ffca28; 
+     font-size: 14px; 
+     font-weight: 700; 
+     letter-spacing: 4px; margin-bottom: 10px; } 
+     
+.hero {
+    min-height: 100vh;
+    background-image: url("https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/448510/capsule_616x353.jpg?t=1788969012");
+    background-size: cover; 
+    background-position: center;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+         
+.overlay { 
+            position: absolute; 
+            inset: 0; background: rgba(0, 0, 0, 0.65); } 
+nav {
+    position: relative; 
+    z-index: 2;
+    width: 100%;
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    padding: 25px 8%; 
+} 
+nav h2 { 
+    color: #ffca28; 
+    font-size: 32px; 
+} 
+nav ul { 
+    display: flex; 
+    gap: 30px; 
+    list-style: none; 
+} 
+nav a { 
+    color: white; 
+    text-decoration: none; 
+    font-weight: 600; 
+    transition: 0.3s; 
+} 
+nav a:hover {
+    color: #ffca28; 
+} /* ========================= HERO CONTENT ========================= */ 
+.hero-content { 
+    position: relative; 
+    z-index: 1; 
+    max-width: 800px; 
+    margin: auto 8%; 
+    padding-bottom: 100px; 
+} 
+.subtitulo { 
+    color: #ffca28; 
+    font-weight: 700; 
+    letter-spacing: 4px; 
+} 
+.hero h1 { 
+    font-size: clamp(70px, 12vw, 160px); 
+    line-height: 0.9; color: #ffffff; 
+    text-shadow: 5px 5px 0 #e53935; 
+} 
+.hero-content > p:not(.subtitulo) {
+     max-width: 600px; 
+     font-size: 20px; 
+     margin: 30px 0; 
+} /* Botão */ 
+.botao { 
+    display: inline-block; 
+    padding: 15px 30px; 
+    background-color: #e53935; 
+    color: white; 
+    text-decoration: none; 
+    font-weight: 700; 
+    border-radius: 5px; 
+    transition: 0.3s; 
+}
+.botao:hover { 
+    background-color: #ffca28; 
+    color: #171717; 
+    transform: translateY(-3px); } 
+    .sobre {
+        background-color: #202020; 
+        display: grid; 
+        grid-template-columns: 1fr 1fr; 
+        gap: 70px; 
+        align-items: center; 
+    } 
+    .texto-sobre h2, .timeline h2, .galeria h2, .curiosidades h2 {
+         font-size: 60px; 
+         margin-bottom: 25px; 
+    } .texto-sobre p {
+        color: #cccccc; 
+        line-height: 1.8;
+        margin-bottom: 18px; 
+    }
+     /* Imagem */ 
+    
+    .imagem-sobre {
+         min-height: 500px;
+        background-image: linear-gradient( rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.65) ), url("https://cdn2.unrealengine.com/Diesel%2Fproduct%2Fovercooked%2Fhome%2FKitchen1-1920x1080-aeb19d379c9d394479acdbdbfc7ae0335bda83fe.jpg"); 
+        background-size: cover; 
+        background-position: center; 
+        display: flex; 
+        align-items: flex-end; 
+        padding: 30px; 
+        border-radius: 10px; 
+    } 
+    .frase { 
+        font-family: "Bangers", cursive; 
+        font-size: 45px; color: #ffca28; 
+    } 
+    /* ========================= LINHA DO TEMPO ========================= */ 
+    .timeline { 
+        background-color: #171717; 
+        text-align: center; } 
+    .timeline-container { 
+        max-width: 1000px; 
+        margin: 60px auto 0; 
+        display: grid; 
+        grid-template-columns: repeat(2, 1fr); 
+        gap: 30px; 
+    } 
+    .evento { 
+        text-align: left; 
+        padding: 30px; 
+        background-color: #252525; 
+        border-left: 5px solid #e53935; 
+        transition: 0.3s; 
+    } 
+    .evento:hover { 
+        transform: translateY(-5px); 
+        border-color: #ffca28; 
+    } 
+    .evento span { 
+        display: inline-block; 
+        color: #ffca28; 
+        font-weight: bold; 
+        font-size: 20px; 
+        margin-bottom: 10px;
+    } 
+    .evento h3 { 
+        font-size: 25px; 
+        margin-bottom: 10px; 
+    }
+    .evento p {
+        color: #bbbbbb; 
+        line-height: 1.6; 
+    }
+     /* ========================= GALERIA ========================= */ 
+    .galeria { 
+        background-color: #202020;
+         text-align: center; 
+    } 
+    .grid-galeria { 
+        margin-top: 50px; display: grid; grid-template-columns: repeat(3, 1fr); grid-auto-rows: 250px; gap: 15px; } 
+    .foto { position: relative; background-size: cover; background-position: center; border-radius: 8px; overflow: hidden; display: flex; align-items: flex-end; padding: 20px; transition: 0.4s; } 
+    .foto::before { content: ""; position: absolute; inset: 0; background: linear-gradient( transparent, rgba(0, 0, 0, 0.8) ); } .foto span { position: relative; z-index: 1; font-weight: 700; font-size: 18px; } 
+    .foto:hover { transform: scale(1.03); } /* Imagens */ 
+    .foto1 { background-image: url("https://jogandocasualmente.com.br/wp-content/uploads/2020/06/review-overcooked-2-switch-1.jpg"); } 
+    .foto2 { background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTjc0LDMwYaHC7kuoWvAKn7VyofX_vlXDr3aTMnvp8Uj83m-vzbpX3oB2M&s=10"); } 
+    .foto3 { background-image: url("https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgIGq_vFT-a6qHlC7XsnNNk_fvJzqu1C5HsiK4SuBvZaFNtyXl_-Xg0dUgONDfswtr3jsEcWAsq-q78-K4mShCiqoWlcp_svVHNsC0tcs6XVc6hoJtsId_woF2j3gwU8m9mH-GwM-9gXuat/s1600/overcooked-01.jpg"); } 
+    .foto4 { background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQqxjhOi3GtWYOvVxVCTf6QjJeCG6qzjSPzhjlEdM08aD5FxmowhuPgxv5y&s=10"); } 
+    .foto5 { background-image: url("https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgkZWNLSJtCZATtdBC2RDFW4vTjItoKbNOHse03oqGNz20ISNWlbbjpN2RjiiPAlFGyMUTyPy3tsD-4M5kN8UBq18YplrjJdJYtmqm0r4PDampa4ZJi1o9Bk-JConxjL9QtC1Rj_oZZGfN-/s1600/overcooked-02.jpg"); }
+    .foto6 { background-image: url("https://i0.wp.com/playagaingames.wordpress.com/wp-content/uploads/2018/09/overcooked-2-header.jpg?fit=1200%2C675&ssl=1"); }    
+    .curiosidades { background-color: #171717; text-align: center; } 
+    .cards { max-width: 1200px; margin: 50px auto 0; display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; } 
+    .card { background-color: #252525; padding: 35px 25px; border-radius: 10px; border-bottom: 5px solid #e53935; transition: transform 0.3s ease, background-color 0.3s ease, border-color 0.3s ease; } /* Efeito solicitado */ 
+    .card:hover { transform: scale(1.06); background-color: #e53935; border-color: #ffca28; } 
+    .icone { font-size: 50px; margin-bottom: 20px; } 
+ .card h3 { font-size: 22px; margin-bottom: 15px; } 
+ .card p { color: #cccccc; line-height: 1.6; } 
+.card:hover p { color: white; } /* ========================= FRASE FINAL ========================= */ 
+.frase-final { min-height: 500px; position: relative; display: flex; align-items: center; justify-content: center; text-align: center; background-image: url("https://images.unsplash.com/photo-1515003197210-e0cd71810b5f?auto=format&fit=crop&w=1920&q=80"); background-size: cover; background-position: center; background-attachment: fixed; } 
+.conteudo-final { position: relative; z-index: 1; max-width: 800px; } 
+.conteudo-final h2 { font-size: 70px; color: #ffca28; text-shadow: 4px 4px 0 #e53935; margin-bottom: 20px; } .conteudo-final p { font-size: 20px; } /* ========================= FOOTER ========================= */ 
+footer { background-color: #101010; text-align: center; padding: 50px 20px; } footer h2 { color: #ffca28; font-size: 40px; } footer p { color: #999999; margin-top: 10px; } footer .copyright { font-size: 13px; } /* ========================= RESPONSIVIDADE ========================= */ @media (max-width: 900px) { nav { flex-direction: column; gap: 20px; } nav ul { gap: 15px; flex-wrap: wrap; justify-content: center; } .sobre { grid-template-columns: 1fr; } .timeline-container { grid-template-columns: 1fr; } .cards { grid-template-columns: repeat(2, 1fr); } .grid-galeria { grid-template-columns: repeat(2, 1fr); } } @media (max-width: 600px) { section { padding: 70px 5%; } .hero-content { margin: auto 5%; } .hero h1 { font-size: 80px; } .texto-sobre h2, .timeline h2, .galeria h2, .curiosidades h2 { font-size: 45px; } .cards { grid-template-columns: 1fr; } .grid-galeria { grid-template-columns: 1fr; } 
+.conteudo-final h2 { font-size: 45px; } }
